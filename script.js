@@ -368,6 +368,35 @@ function getItemsFromLocalStorage() {
     // return items;
   } else {
     console.log("No items found in local storage.");
+    items = [
+      {
+        checked: false,
+        title: "Document Title 1",
+        Status: "Completed",
+        date: "03/02/2025",
+        time: "2:20 PM",
+        file: "",
+      },
+      {
+        checked: false,
+        title: "Document Title 2",
+        Status: "Pending",
+        date: "03/02/2025",
+        time: "2:30 PM",
+        file: "",
+      },
+      {
+        checked: true,
+        title: "Document Title 3",
+        Status: "Waiting",
+        date: "03/02/2025",
+        time: "2:40 PM",
+        file: "",
+      },
+    ];
+
+    // Store these predefined items in localStorage for future use
+    localStorage.setItem("items", JSON.stringify(items));
     // return [];
   }
 }
@@ -381,7 +410,7 @@ function load_document_Page() {
 function init() {
   // addItemButton.addEventListener('click' , handleAddItem);
 
-  // getItemsFromLocalStorage();
+  getItemsFromLocalStorage();
 
   loadItems(items);
 
