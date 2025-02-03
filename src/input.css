@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme {
+  --color-custom-100: oklch(65.67% 0 0);
+  --color-custom-200: oklch(74.18% 0.1779 143.52 / 25.1%);
+  --color-custom-300: oklch(36.53% 0.0477 223.48);
+  --color-custom-400: oklch(53.33% 0.0357 263.34);
+  --color-custom-500: oklch(51% 0.0524 222.73);
+  --color-custom-600: oklch(96.16% 0.0017 67.8);
+}
+
+/* @layer utilities {
+  .p-1900 {
+    padding: 1900px;
+  }
+
+  .m-1900 {
+    margin: 1900px;
+  }
+} */
+
+@layer utilities {
+  .thCustom {
+    @apply text-left whitespace-nowrap px-2;
+  }
+  .tdCustom {
+    @apply items-center border-b-2 border-black py-2 text-left whitespace-nowrap;
+  }
+}

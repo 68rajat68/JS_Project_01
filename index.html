@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project_02</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Emblema+One&family=Heebo:wght@100..900&family=Spline+Sans:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="../src/output.css" />
+  </head>
+  <body class="h-dvh">
+    <div class="flex flex-row h-full">
+      <div
+        id="sidepanel"
+        class="relative box-border flex flex-col justify-between p-3 bg-white w-[20%] h-full overflow-hidden"
+      >
+        <div class="flex flex-col gap-2">
+          <div class="flex flex-row items-center justify-between">
+            <figure>
+              <img class="h-5" src="assets/Union.svg" alt="" />
+            </figure>
+            <i
+              id="PanelClosingIcon"
+              class="fa fa-angle-double-left arrow-position cursor-pointer"
+              aria-hidden="true"
+            ></i>
+          </div>
+          <div
+            class="flex justify-between border-[0.5px] border-custom-100 rounded-sm items-center h-12 gap-1 p-2"
+          >
+            <figure class="items-center h-7 w-7 m-auto">
+              <img class="h-full w-full" src="assets/icon_02.png" alt="N" />
+            </figure>
+            <div class="flex flex-row w-full items-center justify-between">
+              <div class="flex flex-col gap-0 justify-between">
+                <p
+                  class="font-[#2a2a2a] w-[130px] m-0 text-[12px] font-semibold p-0"
+                >
+                  Jessica Thompon
+                </p>
+                <p class="text-slate-500 text-[12px] m-0 p-0">Primary User</p>
+              </div>
+              <figure class="m-0">
+                <img src="assets/Icon Right.svg" alt="Not Found" />
+              </figure>
+            </div>
+          </div>
+          <nav class="text-custom-100">
+            <div
+              class="flex items-center text-sm cursor-pointer rounded-lg hover:bg-green-100 px-3 py-2"
+            >
+              <i class="material-icons mr-3 text-sm">home</i>Home
+            </div>
+            <div
+              id="document"
+              class="flex items-center text-sm cursor-pointer rounded-lg bg-custom-200 hover:bg-green-100 px-4 py-2.5"
+            >
+              <i class="fa fa-file-text-o mr-3"></i>Documents
+            </div>
+            <div
+              class="flex items-center text-sm cursor-pointer rounded-lg hover:bg-green-100 px-4 py-2.5"
+            >
+              <i class="fa fa-comment-o mr-3 text-xl" aria-hidden="true"></i
+              >Chat With Neptune
+            </div>
+            <div
+              class="flex items-center text-sm cursor-pointer rounded-lg hover:bg-green-100 px-4 py-2.5"
+            >
+              <i
+                class="fa fa-question-circle mr-3 text-2xl"
+                aria-hidden="true"
+              ></i
+              >Help
+            </div>
+            <div
+              class="flex items-center text-sm cursor-pointer rounded-lg hover:bg-green-100 px-4 py-2.5"
+            >
+              <i class="fa fa-cog mr-3 text-2xl" aria-hidden="true"></i>Settings
+            </div>
+          </nav>
+        </div>
+        <div>
+          <i class="fa fa-phone text-custom-300" style="font-size: 30px"></i>
+          <p class="text-lg text-custom-300 pt-2 pb-1 m-0">Having trouble?</p>
+          <p class="text-sm text-custom-400 pb-2 m-0">
+            Feel free to contact us and we will always help you through the
+            process.
+          </p>
+          <div
+            class="w-24 h-8 bg-custom-300 rounded-xl text-sm text-white text-center px-1 py-1 cursor-pointer"
+          >
+            Contact us
+          </div>
+        </div>
+      </div>
+
+      <div id="Document_Page" class="flex flex-col gap-3 box-border py-4 px-10 bg-custom-600 w-full h-full">
+        <i
+          id="PanelOpeningIcon"
+          onclick="openNav()"
+          class="fa fa-bars cursor-pointer text-sm "
+          style="display: none;"
+          aria-hidden="true"
+        ></i>
+        <div class="flex items-center justify-between">
+          <div class="flex flex-row items-center gap-3">
+            <p class= "text-sm font-semibold text-custom-500 h-5">Home</p>
+            <figure class="self-center">
+              <i
+                class="fa fa-chevron-right"
+                aria-hidden="true"
+                style="font-size: 8px; color: rgb(95 109 124)"
+              ></i>
+            </figure>
+            <p class="text-sm opacity-50">Documents</p>
+          </div>
+          <div class="text-center items-center" id="profileIcon">
+            <i
+              class="fa fa-user text-xl w-6 h-6 text-center self-center cursor-pointer rounded-2xl border-2 border-black"
+              aria-hidden="true"
+            ></i>
+          </div>
+        </div>
+        <!-- <div id="profileBox" class="profileBox" style="display: none">
+          <h5><b>Name:</b><i> Rajat Jangid</i></h5>
+          <h5><b>Email:</b><i> test@gmail.com</i></h5>
+          <div
+            style="
+              display: flex;
+              flex-direction: column;
+              gap: 10px;
+              justify-content: space-around;
+              padding-top: 10px;
+            "
+          >
+            <button id="editButton" class="button4">Edit</button>
+            <button class="button4">Logout</button>
+          </div>
+        </div> -->
+        <div class="flex justify-between">
+          <p class="text-3xl font-semibold h-6">My Documents</p>
+          <div>
+            <input
+              type="text"
+              name="search"
+              id="search"
+              placeholder="Search documents"
+              style="color: #b5bdcd"
+              class="h-6 w-9xl rounded-sm border-1 border-black pl-6 text-sm"
+            />
+            <figure style="margin: 0">
+              <img
+                class="relative -top-5 -right-1"
+                src="assets/Layer_1.svg"
+                alt=""
+                height="16.65px"
+              />
+            </figure>
+          </div>
+        </div>
+<!-- 
+        <div class="relative max-h-[90%] overflow-auto rounded-sm border-1 border-slate-400">
+          <table class="bg-white border-collapse w-full rounded-sm">
+            <thead class="sticky top-0 z-2 border-2 table w-full h-auto table-fixed ">
+              <th style="width: 75px" class="thCustom">
+                <div
+                class="flex items-center pl-3 gap-2"
+                >
+                  <input type="checkbox" name="checkbox" id="headCheckbox" />
+                  <i
+                    class="fa fa-angle-down"
+                    aria-hidden="true"
+                    style="font-size: 10px; padding-right: 10px"
+                  ></i>
+                </div>
+              </th>
+              <th class="thCustom">
+                <p class="text-slate-400 font-semibold text-lg pl-2" style="color: black">Document Name</p>
+              </th>
+              <th class="thCustom"><p class="text-slate-400 font-semibold text-lg pl-2 pt-2 pb-2">Status</p></th>
+              <th class="last-data thCustom flex flex-row justify-between items-center">
+                <p class="text-slate-400 font-semibold text-lg pl-2 " style="color: black">Last Modified</p>
+                <div style="display: flex; align-items: center; gap: 10px">
+                  <h6 id="removeButtonText" class="removeButton">
+                    Remove Selected
+                  </h6>
+                  <i
+                    class="fa fa-plus-square"
+                    id="additemButton"
+                    aria-hidden="true"
+                    type="button"
+                    class="btn btn-primary pr-3 text-lg"
+                    data-bs-toggle="modal"
+                    data-bs-target="#inputModal"
+                  ></i>
+                </div>
+              </th>
+            </thead>
+            <tbody class="tableBody block w-full table-fixed">
+              <tr class="table w-full table-fixed h-10">
+                <td class="tdCustom" style="padding-left: 28px; width: 75px">
+                    <input check-id='${index}' type="checkbox"  name="check1" id="check1" 
+        />
+                </td>
+                <td class="tdCustom">
+                    <p class="text-slate-400 font-semibold text-sm pl-2 pt-2 pb-2">${element.title}</p>
+                </td>
+                <td class="tdCustom">
+                    <button class="button2 ">Needs Signing
+        </button>    
+                </td>
+                <td class="tdCustom">
+                    <div class="last-area flex justify-between ">
+                    <div class="flex flex-col self-center">
+                        <time date="10/22/2024">${element.date}</time>
+                        <time time="2:01 pm">${element.time}</time>
+                    </div>
+                    <div class="button-menu-section flex self-center items-center">
+                        <button class="button3">"Sign Now"
+                        </button>
+                        <figure style="margin:0px">
+                        <img
+                            src="assets/menu.svg"
+                            alt="Not Found"
+                            style="align-self: center;"
+                        />
+                        </figure>
+                    </div>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div> -->
+
+
+
+      <!-- New Table -->
+
+
+          <div class="w-full mx-auto max-h-[80%] bg-white shadow-lg rounded-lg ">
+              <div class="overflow-y-auto h-full  border border-gray-300 rounded-lg">
+                  <table  class="w-full border-collapse">
+                      
+                      <!-- Table Header -->
+                      <thead class="bg-gray-200 sticky top-0 z-10">
+                          <tr class="border-b border-gray-300">
+                              <th class="px-6 py-3 text-left text-gray-700">
+                                  <div class="flex items-center gap-2">
+                                      <input type="checkbox" class="w-4 h-4 cursor-pointer" id="headCheckbox"/>
+                                      <i class="fa fa-angle-down text-xs"></i>
+                                  </div>
+                              </th>
+                              <th class="px-6 py-3 text-left text-gray-700">Document Name</th>
+                              <th class="px-6 py-3 text-left text-gray-700">Status</th>
+      
+                              <!-- Updated Last Modified Header -->
+                              <th class="px-6 py-3 text-gray-700 flex justify-between items-center">
+                                  <p class="text-black font-semibold text-lg pl-2">Last Modified</p>
+                                  <div class="flex items-center gap-3">
+                                      <p id="removeButtonText" class="text-red-500 text-center items-center m-auto font-medium cursor-pointer hover:underline">
+                                          Remove Selected
+                                      </p>
+                                      <i class="fa fa-plus-square  text-blue-600 text-lg cursor-pointer"
+                                         id="additemButton" 
+                                         aria-hidden="true"
+                                         class="fa fa-plus-square"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#inputModal"
+                                         >
+
+                                      </i>
+                                  </div>
+                              </th>
+                          </tr>
+                      </thead>
+                      
+                      <!-- Table Body -->
+                      <tbody id="tableBody" class="divide-y divide-gray-200">
+                          <tr class="bg-gray-100">
+                              <td class="px-6 py-4"><input type="checkbox" class="w-4 h-4" /></td>
+                              <td class="px-6 py-4">Document Title 1</td>
+                              <td class="px-6 py-4">
+                                  <button class="bg-gray-600 text-white px-3 py-1 rounded">Needs Signing</button>
+                              </td>
+                              <td class="tdCustom px-6 py-4">
+                                  <div class="last-area flex justify-between">
+                                      <div class="flex flex-col self-center text-gray-600">
+                                          <time date="10/22/2024">10/22/2024</time>
+                                          <time time="2:01 pm">2:01 PM</time>
+                                      </div>
+                                      <div class="button-menu-section flex self-center items-center gap-3">
+                                          <button class="bg-slate-400 text-white px-4 py-1 rounded">Sign Now</button>
+                                          <figure class="m-0">
+                                              <img src="assets/menu.svg" alt="Menu" class="w-5 h-5">
+                                          </figure>
+                                      </div>
+                                  </div>
+                              </td>
+                          </tr>
+      
+                          <tr>
+                              <td class="px-6 py-4"><input type="checkbox" class="w-4 h-4" /></td>
+                              <td class="px-6 py-4">Document Title 2</td>
+                              <td class="px-6 py-4">
+                                  <button class="bg-yellow-200 text-white px-3 py-1 rounded">Pending</button>
+                                  <p class="text-sm text-gray-500">Waiting for <em class="text-blue-600">1 person</em></p>
+                              </td>
+                              <td class="tdCustom px-6 py-4">
+                                  <div class="last-area flex justify-between">
+                                      <div class="flex flex-col self-center text-gray-600">
+                                          <time date="10/23/2024">10/23/2024</time>
+                                          <time time="3:30 pm">3:30 PM</time>
+                                      </div>
+                                      <div class="button-menu-section flex self-center items-center gap-3">
+                                          <button class="bg-gray-500 text-white px-4 py-1 rounded">Preview</button>
+                                          <figure class="m-0">
+                                              <img src="assets/menu.svg" alt="Menu" class="w-5 h-5">
+                                          </figure>
+                                      </div>
+                                  </div>
+                              </td>
+                          </tr>
+      
+                          <tr class="bg-gray-100">
+                              <td class="px-6 py-4"><input type="checkbox" class="w-4 h-4" /></td>
+                              <td class="px-6 py-4">Document Title 3</td>
+                              <td class="px-6 py-4">
+                                  <button class="bg-green-300 text-white px-3 py-1 rounded">Completed</button>
+                              </td>
+                              <td class="tdCustom px-6 py-4">
+                                  <div class="last-area flex justify-between">
+                                      <div class="flex flex-col self-center text-gray-600">
+                                          <time date="10/24/2024">10/24/2024</time>
+                                          <time time="1:45 pm">1:45 PM</time>
+                                      </div>
+                                      <div class="button-menu-section flex self-center items-center gap-3">
+                                          <button class="bg-green-500 text-white px-4 py-1 rounded">Download PDF</button>
+                                          <figure class="m-0">
+                                              <img src="assets/menu.svg" alt="Menu" class="w-5 h-5">
+                                          </figure>
+                                      </div>
+                                  </div>
+                              </td>
+                          </tr>
+      
+                          <tr>
+                              <td class="px-6 py-4"><input type="checkbox" class="w-4 h-4" /></td>
+                              <td class="px-6 py-4">Document Title 4</td>
+                              <td class="px-6 py-4">
+                                  <button class="bg-blue-500 text-white px-3 py-1 rounded">Reviewed</button>
+                              </td>
+                              <td class="tdCustom px-6 py-4">
+                                  <div class="last-area flex justify-between">
+                                      <div class="flex flex-col self-center text-gray-600">
+                                          <time date="10/25/2024">10/25/2024</time>
+                                          <time time="4:10 pm">4:10 PM</time>
+                                      </div>
+                                      <div class="button-menu-section flex self-center items-center gap-3">
+                                          <button class="bg-purple-500 text-white px-4 py-1 rounded">View Details</button>
+                                          <figure class="m-0">
+                                              <img src="assets/menu.svg" alt="Menu" class="w-5 h-5">
+                                          </figure>
+                                      </div>
+                                  </div>
+                              </td>
+                          </tr>
+      
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+
+
+  
+      <!-- 
+      <div id="profile_Page" class="section-two-profile">
+        <div class="wrapper">
+          <div class="profile">
+            <div class="content">
+              <h1>Edit Profile</h1>
+              <form action="">
+                
+                <fieldset>
+                  <div class="grid-35">
+                    <label for="avatar">Your Photo</label>
+                  </div>
+                  <div class="grid-65">
+                    <span class="photo" title="Upload your Avatar!"></span>
+                    <input type="file" class="btn" />
+                  </div>
+                </fieldset>
+                <fieldset>
+                  <div class="grid-35">
+                    <label for="fname">Name</label>
+                  </div>
+                  <div class="grid-65">
+                    <input type="text" id="fname" tabindex="1" />
+                  </div>
+                </fieldset>
+
+                <fieldset>
+                  <div class="grid-35">
+                    <label for="email">Email Address</label>
+                  </div>
+                  <div class="grid-65">
+                    <input type="email" id="email" tabindex="6" />
+                  </div>
+                </fieldset>
+
+                <fieldset>
+                  <div class="grid-35">
+                    <label for="company">Company Name</label>
+                  </div>
+                  <div class="grid-65">
+                    <input type="text" id="company" tabindex="10" />
+                  </div>
+                </fieldset>
+                
+                <fieldset>
+                  <div class="grid-35">
+                    <label for="position">Job Title</label>
+                  </div>
+                  <div class="grid-65">
+                    <input type="text" id="position" tabindex="11" />
+                  </div>
+                </fieldset>
+                
+                <fieldset>
+                  <div class="grid-35">
+                    <label for="linkedin">LinkedIn URL</label>
+                  </div>
+                  <div class="grid-65">
+                    <input type="text" id="linkedin" tabindex="12" />
+                  </div>
+                </fieldset>
+                
+                <fieldset>
+                  <div class="grid-35">
+                    <label for="github">Github URL</label>
+                  </div>
+                  <div class="grid-65">
+                    <input type="text" id="github" tabindex="13" />
+                  </div>
+                </fieldset>
+                
+                
+                <fieldset>
+                  <input type="button" class="Btn cancel" value="Cancel" />
+                  <input type="submit" class="Btn" value="Save Changes" />
+                </fieldset>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="inputModal"
+      tabindex="-1"
+      aria-labelledby="modalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalLabel">
+              Upload File and Select Status
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="modalForm">
+              <!-- File Input -->
+              <div class="mb-3">
+                <label for="fileInput" class="form-label">Choose a file</label>
+                <input
+                  class="form-control"
+                  type="file"
+                  id="fileInput"
+                  required
+                />
+              </div>
+
+              <!-- List Selection -->
+              <div class="mb-3">
+                <label for="listSelection" class="form-label"
+                  >Select your file Status</label
+                >
+                <select class="form-select" id="listSelection" required>
+                  <option value="" disabled selected>Choose...</option>
+                  <option value="Completed">Completed</option>
+                  <option value="Waiting">Pending</option>
+                  <option value="Needs_Signing">Needs Signing</option>
+                </select>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <button type="button" class="btn btn-primary" id="saveButton">
+              Save
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
