@@ -228,7 +228,7 @@ function loadItems(items) {
                                             element.time
                                           }</time>
                                       </div>
-                                      <div class="button-menu-section flex self-center items-center gap-3">
+                                      <div class="button-menu-section flex self-center w-[60%] justify-between items-center gap-3">
                                           <button class="bg-slate-400 text-black font-semibold px-4 py-1 rounded">${
                                             element.Status == "Completed"
                                               ? "Download PDF"
