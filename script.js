@@ -403,7 +403,7 @@ function getItemsFromLocalStorage() {
 
 function load_document_Page() {
   document_nav.classList.add("active");
-  document_Div.style.display = "block";
+  document_Div.style.display = "flex";
   profile_Div.style.display = "none";
   profileBox.style.display = "none";
 }
@@ -433,7 +433,7 @@ init();
 
 function openNav() {
   const panel = document.getElementById("sidepanel");
-  panel.style.display = "block";
+  panel.style.display = "flex";
   panel.style.width = "20%";
   panel.style.height = "100%";
   // panel.style.padding = "20px 24px 20px 24px";

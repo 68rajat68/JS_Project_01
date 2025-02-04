@@ -18,12 +18,3 @@
     margin: 1900px;
   }
 } */
-
-@layer utilities {
-  .thCustom {
-    @apply text-left whitespace-nowrap px-2;
-  }
-  .tdCustom {
-    @apply items-center border-b-2 border-black py-2 text-left whitespace-nowrap;
-  }
-}

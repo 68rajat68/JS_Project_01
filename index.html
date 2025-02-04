@@ -43,13 +43,14 @@
         class="relative box-border flex flex-col justify-between p-3 bg-white w-[20%] h-full overflow-hidden"
       >
         <div class="flex flex-col gap-2">
-          <div class="flex flex-row items-center justify-between">
-            <figure>
+          <div class="flex flex-row items-center justify-between p-2 pb-4">
+            <figure class="m-0">
               <img class="h-5" src="assets/Union.svg" alt="" />
             </figure>
             <i
               id="PanelClosingIcon"
-              class="fa fa-angle-double-left arrow-position cursor-pointer"
+              class="fa fa-angle-double-left arrow-position cursor-pointer "
+              style="font-size: 24px;"
               aria-hidden="true"
             ></i>
           </div>
@@ -59,8 +60,8 @@
             <figure class="items-center h-7 w-7 m-auto">
               <img class="h-full w-full" src="assets/icon_02.png" alt="N" />
             </figure>
-            <div class="flex flex-row w-full items-center justify-between">
-              <div class="flex flex-col gap-0 justify-between">
+            <div class="flex flex-row w-full items-center justify-between m-0">
+              <div class="flex flex-col gap-0 justify-between m-0">
                 <p
                   class="font-[#2a2a2a] w-[130px] m-0 text-[12px] font-semibold p-0"
                 >
@@ -68,7 +69,7 @@
                 </p>
                 <p class="text-slate-500 text-[12px] m-0 p-0">Primary User</p>
               </div>
-              <figure class="m-0">
+              <figure class="m-0 cursor-pointer">
                 <img src="assets/Icon Right.svg" alt="Not Found" />
               </figure>
             </div>
@@ -122,7 +123,7 @@
         </div>
       </div>
 
-      <div id="Document_Page" class="flex flex-col gap-3 box-border py-4 px-10 bg-custom-600 w-full h-full">
+      <div id="Document_Page" class="flex flex-col gap-4 box-border py-4 px-10 bg-custom-600 w-full h-full">
         <i
           id="PanelOpeningIcon"
           onclick="openNav()"
@@ -132,19 +133,20 @@
         ></i>
         <div class="flex items-center justify-between">
           <div class="flex flex-row items-center gap-3">
-            <p class= "text-sm font-semibold text-custom-500 h-5">Home</p>
-            <figure class="self-center">
+            <p class= "text-sm font-semibold text-custom-500 h-5 m-0">Home</p>
+            <figure class="m-0 pb-0.5">
+
               <i
                 class="fa fa-chevron-right"
                 aria-hidden="true"
-                style="font-size: 8px; color: rgb(95 109 124)"
+                style="font-size: 10px; color: rgb(95 109 124)"
               ></i>
             </figure>
-            <p class="text-sm opacity-50">Documents</p>
+            <p class="text-sm opacity-50 m-0">Documents</p>
           </div>
-          <div class="text-center items-center" id="profileIcon">
+          <div class="text-center items-center cursor-pointer w-7 h-7 rounded-2xl border-2 border-black" id="profileIcon">
             <i
-              class="fa fa-user text-xl w-6 h-6 text-center self-center cursor-pointer rounded-2xl border-2 border-black"
+              class="fa fa-user text-xl text-center self-center"
               aria-hidden="true"
             ></i>
           </div>
@@ -165,8 +167,8 @@
             <button class="button4">Logout</button>
           </div>
         </div> -->
-        <div class="flex justify-between">
-          <p class="text-3xl font-semibold h-6">My Documents</p>
+        <div class="flex justify-between items-center">
+          <p class="text-3xl font-semibold m-0">My Documents</p>
           <div>
             <input
               type="text"
@@ -176,7 +178,7 @@
               style="color: #b5bdcd"
               class="h-6 w-9xl rounded-sm border-1 border-black pl-6 text-sm"
             />
-            <figure style="margin: 0">
+            <figure class="m-0 h-0">
               <img
                 class="relative -top-5 -right-1"
                 src="assets/Layer_1.svg"
@@ -267,13 +269,13 @@
       <!-- New Table -->
 
 
-          <div class="w-full mx-auto max-h-[80%] bg-white shadow-lg rounded-lg ">
-              <div class="overflow-y-auto h-full  border border-gray-300 rounded-lg">
+          <div class="w-full mx-auto max-h-[80%] bg-white shadow-lg shadow-gray-400 rounded-lg ">
+              <div class="overflow-y-auto h-full  border-2 border-white rounded-lg">
                   <table  class="w-full border-collapse">
                       
                       <!-- Table Header -->
-                      <thead class="bg-gray-200 sticky top-0 z-10">
-                          <tr class="border-b border-gray-300">
+                      <thead class="bg-gray-100 sticky top-0 z-10 ">
+                          <tr class="border-b-2 border-gray-300 ">
                               <th class="px-6 py-3 text-left text-gray-700">
                                   <div class="flex items-center gap-2">
                                       <input type="checkbox" class="w-4 h-4 cursor-pointer" id="headCheckbox"/>
@@ -285,7 +287,7 @@
       
                               <!-- Updated Last Modified Header -->
                               <th class="px-6 py-3 text-gray-700 flex justify-between items-center">
-                                  <p class="text-black font-semibold text-lg pl-2">Last Modified</p>
+                                  <p class="text-black font-semibold text-lg pl-2 m-0">Last Modified</p>
                                   <div class="flex items-center gap-3">
                                       <p id="removeButtonText" class="text-red-500 text-center items-center m-auto font-medium cursor-pointer hover:underline">
                                           Remove Selected
